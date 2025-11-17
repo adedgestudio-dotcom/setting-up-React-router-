@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
 import About from "./components/About.jsx";
 import Login from "./components/Login.jsx";
+import User from "./components/User.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -22,7 +23,7 @@ function App() {
     },
 
     {
-      path: "/Login",
+      path: "/login",
       element: (
         <>
           <Navbar />
@@ -31,11 +32,20 @@ function App() {
       ),
     },
     {
-      path: "/About",
+      path: "/about",
       element: (
         <>
           <Navbar />
           <About />
+        </>
+      ),
+    },
+    {
+      path: "/user/:username",
+      element: (
+        <>
+          <Navbar />
+          <User />
         </>
       ),
     },
