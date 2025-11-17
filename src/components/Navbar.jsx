@@ -1,22 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav>
-        <Link to="/">
+    <div className="p-0 m-0">
+      <nav  className="flex gap-8 bg-pink-400 justify-center items-center text-white list-none  " >
+        <NavLink className={(e)=>{return e.isActive? "bg-blue-400": ""}} to="/">
           <li>Home</li>
-        </Link>
-        <Link to="/About">
+        </NavLink>
+        <NavLink className={(e)=>{return e.isActive? "bg-blue-400": ""}} to="/about">
           <li>About</li>
-        </Link>
-        <Link to="/Login">
+        </NavLink>
+        <NavLink className={(e)=>{return e.isActive? "bg-blue-400": ""}} to="/login">
           <li>Login</li>
-        </Link>
+        </NavLink>
       </nav>
     </div>
   );
 };
 
 export default Navbar;
+
+
